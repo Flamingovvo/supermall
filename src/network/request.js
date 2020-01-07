@@ -4,7 +4,8 @@ import { rejects } from 'assert'
 export function request(config){
   //1.创建axios实例
   const instance = axios.create({
-    baseURL:'http://123.207.32.32:8000/api/v2',
+    baseURL: "http://123.207.32.32:8000/api/w1",
+    //baseURL = "http://106.54.54.237:8000/api/w1"
     timeout: 5000
   })
   

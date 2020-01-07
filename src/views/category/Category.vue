@@ -123,11 +123,11 @@
       })
 
       this.scroll.on('scroll', (position) => {
-        console.log(position);
+      //  console.log(position);
       })
 
       this.scroll.on('pullingUp', () => {
-        console.log('上拉加载更多');
+      //  console.log('上拉加载更多');
       })
     }
   }
