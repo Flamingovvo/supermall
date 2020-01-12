@@ -56,6 +56,7 @@
         this.scroll && this.scroll.scrollTo(x, y, time)
       },
       refresh() {
+       
         this.scroll && this.scroll.refresh()
       },
       finishPullUp() {
