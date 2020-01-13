@@ -170,7 +170,9 @@
         //操作store中mutaitions
         // this.$store.commit('addCart',product)  
         //操作store中actions
-        this.$store.dispatch('addCart',product)
+        this.$store.dispatch('addCart',product).then(res => {
+          console.log(res);
+        })
       }
     }
   }

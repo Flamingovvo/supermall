@@ -4,6 +4,7 @@ export default {
         payload.count++
     },
     addToCart(state,payload){
+        payload.checked = true
         state.cartList.push(payload)
     }
     //mutations中的每个方法尽可能完成的事件比较单一一点

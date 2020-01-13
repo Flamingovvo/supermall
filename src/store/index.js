@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import actions from './actions'
 import mutations from './mutations'
+import getters from './getters'
 // 1.安装插件
 Vue.use(Vuex)
 
@@ -12,6 +13,7 @@ const state = {
 // 2.创建store对象
 const store = new Vuex.Store({
     state,
+    getters,
     mutations,  
     actions
 })
