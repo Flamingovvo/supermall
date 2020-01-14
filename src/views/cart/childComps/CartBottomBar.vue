@@ -6,7 +6,7 @@
           @click.native="checkClick"></check-button>
         <span>全选</span>
         <span class="total-price">合计: ¥{{totalPrice}}</span>
-        <span class="buy-product">去计算({{checkLength}})</span>
+        <span class="buy-product" @click="calcClick">去计算({{checkLength}})</span>
      </div>
 </template>
 
@@ -59,6 +59,11 @@ export default {
         }
         //有些地方可以改成下面代码，但是这里不行，因为item.checked的改变会影响isSelectAll的值，然后进而影响item.checked
         //this.$store.state.cartList.forEach(item => item.checked = !this.isSelectAll)
+      },
+      calcClick(){
+        if(!this.isSelectAll){
+          this.$toast.show('请选择购买的商品',2000)
+        }
       }
     },
 }

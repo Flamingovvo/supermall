@@ -165,13 +165,13 @@
         product.desc = this.goods.desc
         product.price = this.goods.realPrice
         product.iid = this.iid
-
         //2.将商品添加到购物车里
         //操作store中mutaitions
         // this.$store.commit('addCart',product)  
         //操作store中actions
         this.$store.dispatch('addCart',product).then(res => {
-          console.log(res);
+          //console.log(this.$toast);
+          this.$toast.show(res,2000)
         })
       }
     }
